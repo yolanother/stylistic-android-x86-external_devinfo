@@ -1,0 +1,18 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES:=\
+    devinfo.cpp
+
+LOCAL_CFLAGS:=-O2 -g
+#LOCAL_CFLAGS+=-DLINUX
+
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+
+LOCAL_MODULE_TAGS := eng
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+
+LOCAL_MODULE:=devinfo
+
+include $(BUILD_EXECUTABLE)
